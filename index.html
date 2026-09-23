@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#212121">
+<title>Chat Clone</title>
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<div id="app">
+<aside id="sidebar" class="sidebar" aria-label="Conversas">
+  <div class="side-top">
+    <button id="newChatBtn" class="brand-btn" aria-label="Novo chat"><span class="brand-mark">✦</span><span class="brand-name">Chat Clone</span><span class="compose">✎</span></button>
+    <button id="searchBtn" class="side-row"><span>⌕</span><span>Pesquisar chats</span></button>
+  </div>
+  <div id="history" class="history"></div>
+  <div class="side-bottom">
+    <button id="themeBtn" class="side-row"><span>◐</span><span>Tema</span></button>
+    <div class="profile-row"><div class="avatar">A</div><div class="profile-copy"><strong>Você</strong><small>Modo local</small></div></div>
+  </div>
+</aside>
+<div id="scrim" class="scrim"></div>
+<main class="main">
+  <header class="topbar">
+    <button id="menuBtn" class="icon-btn mobile-only" aria-label="Abrir menu">☰</button>
+    <button id="modelBtn" class="model-btn">Local Smart <span>⌄</span></button>
+    <div id="modelMenu" class="model-menu hidden">
+      <button data-model="Local Smart">Local Smart<small>respostas demonstrativas</small></button>
+      <button data-model="Local Fast">Local Fast<small>mais curto e direto</small></button>
+    </div>
+    <div class="top-spacer"></div>
+    <button class="icon-btn" id="shareBtn" aria-label="Compartilhar">↗</button>
+    <button class="icon-btn" id="moreBtn" aria-label="Mais opções">•••</button>
+  </header>
+
+  <section id="chatArea" class="chat-area">
+    <div id="welcome" class="welcome">
+      <div class="welcome-mark">✦</div>
+      <h1>Como posso ajudar?</h1>
+      <div class="suggestions">
+        <button>Explique computação quântica de forma simples</button>
+        <button>Crie uma ideia de produto diferente</button>
+        <button>Revise um texto e deixe mais claro</button>
+        <button>Monte um plano de estudos de 7 dias</button>
+      </div>
+    </div>
+    <div id="messages" class="messages"></div>
+  </section>
+
+  <button id="jumpBottom" class="jump-bottom hidden" aria-label="Ir para o fim">↓</button>
+
+  <footer class="composer-wrap">
+    <div class="composer">
+      <textarea id="prompt" rows="1" placeholder="Pergunte alguma coisa" aria-label="Mensagem"></textarea>
+      <div class="composer-actions">
+        <div class="left-actions">
+          <input id="fileInput" type="file" multiple hidden>
+          <button id="attachBtn" class="circle-btn" aria-label="Anexar arquivo">＋</button>
+          <span id="attachmentLabel" class="attachment-label"></span>
+        </div>
+        <button id="sendBtn" class="send-btn" aria-label="Enviar">↑</button>
+      </div>
+    </div>
+    <div class="disclaimer">Clone local demonstrativo. Nenhuma mensagem é enviada para servidores externos.</div>
+  </footer>
+</main>
+</div>
+<script src="./app.js"></script>
+</body>
+</html>
